@@ -1,0 +1,115 @@
+body.dark .os-viewport {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-position: unset;
+        font-size: 15px;
+    }
+}
+
+.ui.inverted.segment,
+#dream-search.inverted .results {
+    background-color: #333;
+}
+
+.dream-nav.fixed {
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%) !important;
+}
+
+.ui.attached.segment.dream-card {
+    border: none;
+    border-radius: 1.5em;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%); /* Bulma Box */
+}
+
+.dream-back .ui.segment,
+.ui.segment.dream-posts-section,
+.ui.segment.dream-categories-section,
+.ui.segment.dream-tags-section,
+.dream-single-aside .ui.segment,
+.ui.segment.post-disqus-area,
+.ui.segment.utterances-comments {
+    border-radius: 1.5em;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%);
+}
+
+.ui.segment.toc {
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    float: right;
+}
+
+.dream-single .ui.top.attached.segment {
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+
+.dream-single .ui.attached.segment:not(.cover) {
+    border-style: revert;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%);
+}
+
+body.dark .markdown-body .highlight pre {
+    background: #222 !important;
+}
+
+/*custom */
+body {
+    font-size: 15px;
+}
+
+.dream-nav.fixed {
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%) !important;
+}
+
+nav.ui.secondary.menu.dream-menu.dream-nav.fixed {
+    background: #ffffff;
+}
+
+h1.ui.header .sub.header {
+    margin-top: 5px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.dream-single h1.ui.large.header .sub.header {
+    margin-top: 10px;
+}
+
+.markdown-body code {
+    background: #8fbc8f61;
+    padding: .1em .2em;
+    vertical-align: middle;
+    margin: .2em;
+    font-family: Menlo;
+    font-size: 13px;
+}
+
+.markdown-body pre {
+    font-family: Consolas, Monaco, monospace;
+}
+
+.markdown-body .highlight pre, .markdown-body pre {
+    background: #282C34;
+    font-size: 13px;
+    padding: 0;
+}
+
+pre code.hljs {
+    font-family: Consolas, Monaco, monospace;
+    font-size: 13px;
+    line-height: 1.5;
+}

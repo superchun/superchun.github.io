@@ -10,47 +10,20 @@
     <lastBuildDate>Sat, 15 Aug 2020 14:20:48 +0800</lastBuildDate><atom:link href="https://superchun.net/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Swift相对于OC的特性</title>
-      <link>https://superchun.net/posts/swift-oc/</link>
+      <link>https://superchun.net/post/swift-oc/</link>
       <pubDate>Sat, 15 Aug 2020 14:20:48 +0800</pubDate>
       
-      <guid>https://superchun.net/posts/swift-oc/</guid>
+      <guid>https://superchun.net/post/swift-oc/</guid>
       <description>Swift 在经过一段时间的发展，在 Swift5.0 ABI 稳定了，Swift 整个生态也比较丰富，使得可以在生产环境放心得使用 Swift 进行开发了。相对于 OC 繁琐的语法，以及外界不太认同的方括号调用，Swift 在语法层面及语言设计层面，显得更加 modern，开发起来也比较顺手</description>
     </item>
     
     <item>
       <title>OC中的mutable与immutable及它们的修饰符</title>
-      <link>https://superchun.net/posts/oc-mutable-immutble/</link>
+      <link>https://superchun.net/post/oc-mutable-immutble/</link>
       <pubDate>Mon, 03 Aug 2020 22:50:07 +0800</pubDate>
       
-      <guid>https://superchun.net/posts/oc-mutable-immutble/</guid>
+      <guid>https://superchun.net/post/oc-mutable-immutble/</guid>
       <description>OC 中的对象有一个分类：&lt;strong&gt;可变（mutable）&lt;strong&gt;与&lt;/strong&gt;不可变（inmutable）&lt;/strong&gt;。比较常见的就是不可变 NSString、NSArray 和 NSDictionary，与可变的 NSMutableString、NSMutableArray 和 NSMutableDictionary。</description>
-    </item>
-    
-    <item>
-      <title>Swift的初始化</title>
-      <link>https://superchun.net/posts/swift-initial/</link>
-      <pubDate>Tue, 28 Jul 2020 22:48:37 +0800</pubDate>
-      
-      <guid>https://superchun.net/posts/swift-initial/</guid>
-      <description>初始化是类、结构体或枚举实例化的一个过程。在新实例可用之前，这个过程会给实例的存储属性设置一个初始值以及执行一些其他必须的设置或初始化。</description>
-    </item>
-    
-    <item>
-      <title>Swift中的访问控制</title>
-      <link>https://superchun.net/posts/swift-access-control/</link>
-      <pubDate>Sat, 25 Jul 2020 22:46:36 +0800</pubDate>
-      
-      <guid>https://superchun.net/posts/swift-access-control/</guid>
-      <description>每一种语言都有自己的访问控制，以实现代码封装。访问控制可以隐藏代码的实现细节，而对外提供一个接口进行访问和使用，从而保护我们的源码。Swift 也提供了自己的访问控制</description>
-    </item>
-    
-    <item>
-      <title>What&#39;s New in Xcode11</title>
-      <link>https://superchun.net/posts/whats-new-in-xcode11/</link>
-      <pubDate>Tue, 05 Nov 2019 15:38:21 +0000</pubDate>
-      
-      <guid>https://superchun.net/posts/whats-new-in-xcode11/</guid>
-      <description>WWDC 2019 已经过去快半年多了，Xcode 11 更新也有段时间了。用了一段时间之后，发现 Xcode 11 较之 Xcode 10 还是有许多地方不一样的，于是便看了 &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2019/401/&#34;&gt;WWDC 2019 Session 401&lt;/a&gt;，顺便做一下记录。</description>
     </item>
     
   </channel>

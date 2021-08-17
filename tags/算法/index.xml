@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on 悉达多的异次元空间</title>
+    <link>https://superchun.net/tags/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on 悉达多的异次元空间</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
+    <lastBuildDate>Tue, 03 Dec 2019 10:28:26 +0000</lastBuildDate><atom:link href="https://superchun.net/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从Heapsort与Mergesort看排序算法</title>
+      <link>https://superchun.net/posts/sort-algorithm-heapsort-mergesort/</link>
+      <pubDate>Tue, 03 Dec 2019 10:28:26 +0000</pubDate>
+      
+      <guid>https://superchun.net/posts/sort-algorithm-heapsort-mergesort/</guid>
+      <description>排序是最基本也是最广泛的一种算法，很多非常高效的算法都需要经过排序预处理。如果有了排好序的数据，那么许多问题的解决将会变得非常简单。</description>
+    </item>
+    
+  </channel>
+</rss>

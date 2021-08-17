@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS学习(五)：视觉格式化模型 | 悉达多的异次元空间</title>
+
+    
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+
+<meta name="author" content="悉达多" />
+<meta name="description" content="CSS 学习笔记第五篇。关于 CSS 中的视觉格式化模型" />
+
+
+
+<meta name="generator" content="Hugo 0.87.0" />
+
+<link rel="canonical" href="https://superchun.net/posts/css-study-visiual-style/" />
+
+
+<meta property="og:title" content="CSS学习(五)：视觉格式化模型" />
+<meta property="og:description" content="CSS 学习笔记第五篇。关于 CSS 中的视觉格式化模型" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://superchun.net/posts/css-study-visiual-style/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-06-27T13:23:26+08:00" />
+<meta property="article:modified_time" content="2020-06-27T13:23:26+08:00" />
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS学习(五)：视觉格式化模型"/>
+<meta name="twitter:description" content="CSS 学习笔记第五篇。关于 CSS 中的视觉格式化模型"/>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<link rel="stylesheet" href="/css/icomoon.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@1.13.1/css/OverlayScrollbars.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css">
+<link rel="stylesheet" href="/css/site.css" />
+
+<style>
+  .ui.header a:not(.item, .ui.button):hover {
+    text-decoration: underline;
+  }
+
+  
+  a:not(.item, .ui.button) {
+    color: seagreen !important;
+  }
+  
+
+  
+
+  
+  body.default {
+    
+    background-color: #fff;
+    
+
+    
+    background-image: url(/me/background.jpg);
+    
+  }
+  
+
+  
+</style>
+
+
+    
+
+
+
+<link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/monokai-sublime.min.css" />
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+  </head>
+
+  <body class="default">
+    
+<nav class="ui secondary menu dream-menu dream-nav">
+
+  <a class="item dream-flip-toggle" title="翻转！">
+    <i class="large link bullseye icon"></i>
+  </a>
+  <a class="item" href="https://superchun.net/" title="首页">
+    <i class="large link home icon"></i>
+  </a>
+  
+  
+  <a class="item" title="搜索" onclick="toggleSearch(event)">
+    <i class="large link search icon"></i>
+  </a>
+  
+</nav>
+
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
+<div class="ui relaxed centered grid dream-grid dream-grid-single">
+  
+  
+  
+  
+
+  
+  <aside class="sixteen wide mobile sixteen wide tablet three wide computer column dream-single-aside">
+    
+    <div class="ui segment toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#盒子类型">盒子类型</a></li>
+    <li><a href="#display">display</a></li>
+    <li><a href="#定位规则">定位规则</a>
+      <ul>
+        <li><a href="#普通流">普通流</a></li>
+        <li><a href="#浮动">浮动</a></li>
+        <li><a href="#绝对定位">绝对定位</a></li>
+      </ul>
+    </li>
+    <li><a href="#float-与-clear">Float 与 Clear</a></li>
+    <li><a href="#margin-塌陷">Margin 塌陷</a></li>
+    <li><a href="#包含块">包含块</a>
+      <ul>
+        <li><a href="#如何确定包含块">如何确定包含块</a></li>
+      </ul>
+    </li>
+    <li><a href="#bfcblock-formatting-context-块格式化上下文">BFC（Block Formatting Context 块格式化上下文）</a>
+      <ul>
+        <li><a href="#如何创建-bfc">如何创建 BFC</a></li>
+        <li><a href="#bfc-的特性">BFC 的特性</a></li>
+        <li><a href="#触发-bfc">触发 BFC</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
+
+    
+  </aside>
+  
+  <div class="sixteen wide mobile sixteen wide tablet ten wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    <section class="ui top attached segment">
+      <header>
+        <h1 class="ui large header">CSS学习(五)：视觉格式化模型<span class="sub header">
+            <span class="left">
+              @
+              
+                悉达多
+              
+
+              | 
+                  <span data-format="luxon">2020-06-27T13:23:26&#43;08:00</span>
+                
+
+              | 6 分钟阅读
+
+              
+              | 更新于
+                
+                  <span data-format="luxon">2020-06-27T13:23:26&#43;08:00</span>
+                
+              
+            </span>
+
+            
+            <span class="dream-share">
+  <a href="#" class="save-as-image" title="保存为图片" onclick="savePostAsImg()">
+    <i class="save icon"></i>
+  </a>
+  <a href="https://twitter.com/intent/tweet?text=CSS%e5%ad%a6%e4%b9%a0%28%e4%ba%94%29%ef%bc%9a%e8%a7%86%e8%a7%89%e6%a0%bc%e5%bc%8f%e5%8c%96%e6%a8%a1%e5%9e%8b&url=https%3a%2f%2fsuperchun.net%2fposts%2fcss-study-visiual-style%2f" title="Twitter">
+    <i class="twitter icon"></i>
+  </a>
+  <a href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fsuperchun.net%2fposts%2fcss-study-visiual-style%2f" title="Facebook">
+    <i class="facebook icon"></i>
+  </a>
+</span>
+
+            
+          </span>
+        </h1>
+      </header>
+
+      <article class="main">
+        
+
+        <p>HTML 中的元素分为<strong>块级元素</strong>和<strong>行内元素</strong>。</p>
+<p><strong>块级元素</strong>：一般地，块级元素占据其父元素的整个空间，因此创建了一个“块”。每个块级元素默认占一行高度，块级元素后面会自动换行。一般块级元素可以包含行内元素和其他块级元素。高度、行高、外边距和内边距都可控，宽度缺省是它的容器的 100%</p>
+<p><strong>行内元素</strong>：一般情况下，行内元素只能包含数据和其它行内元素。和其它元素都在一行上，不会新开一行显示。高度、行高、外边距和内边距不可改变。宽度就是内容的宽度</p>
+<p>从元素本身讲，元素又可以分为<strong>可替换元素</strong>和<strong>不可替换元素</strong>。</p>
+<p><strong>可替换元素</strong>：浏览器根据元素的标签和属性，来决定元素的具体显示内容。如 <code>&lt;img&gt;</code>、<code>&lt;input&gt;</code> 等都是替换元素。</p>
+<p><strong>不可替换元素</strong>：HTML 中的大多数元素都是不可替换元素，即其内容直接显示出来。</p>
+<p>替换元素一般有内在尺寸，所以具有 width 和 height，可以设定。如果不指定，就会按期内在尺寸显示。</p>
+<p>每个元素都会根据其盒子模型生成 0 个或多个盒子。盒子的布局由几个因素决定：</p>
+<ul>
+<li>盒子的类型和尺寸</li>
+<li>定位方案：普通流定位、浮动和绝对定位</li>
+<li>document 树中元素间的关系</li>
+<li>外部因素（如视口大小、图片尺寸等）</li>
+</ul>
+<h2 id="盒子类型">盒子类型</h2>
+<p>盒子的类型主要分为<strong>块盒子</strong>和<strong>行内盒子</strong>。</p>
+<p>块盒子分为<strong>块容器盒子、块级盒子和块盒子</strong>。</p>
+<p><strong>block container box 块容器盒子</strong> ，侧重于当前盒子作为“容器”的角色，不参与当前块的布局和定位，仅仅只描述当前盒与其后代的关系。块容器盒子主要用于确定其子元素的定位和布局。</p>
+<p><strong>block-level box 块级盒子</strong>，由块级元素生成。一个块级元素至少会生成一个块级盒子。</p>
+<p><strong>block box 块盒子</strong>，同时是块级盒子和块容器盒子的盒子。</p>
+<p>块盒子和行内盒子都有<strong>匿名盒子</strong>。匿名盒子无法被选中，从父元素那里继承可继承的属性，其他属性保持默认值 <code>initial</code>。</p>
+<p>还有一种特殊的盒子叫 <strong>Run-in 盒子</strong>，通过<code>disply: run-in</code>定义，它可以是块盒子，也可以是行内盒子，取决于紧随其后的盒子的类型。</p>
+<p>行内盒子只能设置水平方向的 padding、border 和 margin，设置垂直方向的 padding、border 和 margin 不会影响它的高度。</p>
+<h2 id="display">display</h2>
+<p><code>display</code> 属性规定了元素生成的盒子的类型。也就是说，它可以改变 HTML 标签原本生成的盒子类型。比如，给一个行内元素的 <code>display</code> 属性设置为 <code>block</code> ，这个行内元素就会表现得跟块级元素一样了。</p>
+<p>当 <code>display</code> 属性设置为 <code>inline-block</code> 的时候，这个元素就会变为<strong>行内块级元素</strong>。它即拥有行内元素的特性，也可以为其设置高度、宽度、垂直 margin 和 padding。</p>
+<h2 id="定位规则">定位规则</h2>
+<p>当盒子生成以后，CSS 就需要定位它们已完成布局，定位盒子有以下规则：</p>
+<ul>
+<li>普通流（normal flow）：按照次序依次定位每个盒子</li>
+<li>浮动（float）：将盒子从普通流中拎出来，将其放到外层盒子的某一边</li>
+<li>绝对定位：按照绝对位置来定位盒子，将其位置根据盒子的包含元素所建立的绝对坐标系来计算，因此绝对定位元素有可能会覆盖其它元素</li>
+</ul>
+<h3 id="普通流">普通流</h3>
+<p>在普通流中，盒子会依次放置。在块格式化上下文中，盒子在垂直方向依次排列；在行内格式化上下文中，盒子则水平排列。</p>
+<p>普通流又有两种情况：<strong>静态定位</strong>和<strong>相对定位</strong>：</p>
+<ul>
+<li>当 <code>position</code> 属性为 <code>static</code> 时为静态定位，此时每个盒子根据普通流所计算出的确切位置来定位。</li>
+<li>当 <code>position</code> 属性为 <code>relative</code> 时为相对定位，此时每个盒子还会根据 <code>top</code>、<code>botton</code>、<code>left</code>和<code>right</code> 属性的值在<strong>盒子原本所在的位置</strong>产生指定大小的偏移。</li>
+</ul>
+<h3 id="浮动">浮动</h3>
+<p>在浮动定位中，浮动盒子会浮动到当前行的开始或尾部位置。这会导致普通流中的文本及其它内容会流到浮动盒子的边缘处，除非元素通过 <code>clear</code> 清除了前面的浮动。</p>
+<p>一个盒子的 <code>float</code> 属性不为 <code>none</code>，并且其 <code>position</code> 为 <code>static</code> 或 <code>relative</code> 时，这个盒子为浮动盒子。将 <code>float</code> 设置为 <code>left</code>时，浮动盒子会定位到当前行盒子的开始位置；将 <code>float</code> 设置为 <code>right</code> 时，浮动盒子会定位到当前行盒子的尾部位置。不管是左浮动还是右浮动，行盒子都会伸缩以适应浮动盒子的大小。</p>
+<h3 id="绝对定位">绝对定位</h3>
+<p>在绝对定位中，盒子会完全从当前流中移除，并且不会再与其有任何联系（仅指定位与位置计算，在 document 中的节点关系仍然存在），其位置会根据 <code>top</code>、<code>bottom</code>、<code>left</code> 和 <code>right</code> 相对其<strong>包含块</strong>计算。</p>
+<p>当元素的 <code>position</code> 为 <code>absolute</code> 或 <code>fixed</code> 时，该元素为绝对定位。</p>
+<p>对于 <code>position</code> 为 <code>fixed</code> 即固定位置的元素而言，其包含块为整个视口，该元素相对于视口进行绝对定位，因此滚动时元素的位置不会改变。</p>
+<h2 id="float-与-clear">Float 与 Clear</h2>
+<p>将一个元素设置为 float 时，它会影响相邻元素的排列，即把相邻的元素向右或向左挤压。如果相邻的元素不想被挤压的话，则需要设置 <code>clear</code> 属性。与 float 会影响相邻元素相比，clear 属性只会影响自身，不会影响其他元素。即如果在一段文本的左侧，有一个浮动的 image，如果不想文本被挤压在右侧，而是在下面显示，就需要设置其 <code>clear</code> 为 <code>left</code>，即左侧抗浮动。</p>
+<h2 id="margin-塌陷">Margin 塌陷</h2>
+<p>当两个或多个垂直 margin 相遇时，它们会塌陷成一个 margin，margin 的高度等于最两个塌陷 margin 中最大的那个。</p>
+<p>margin 塌陷是为了兼容 在发明 CSS1.0 之前使用的 <code>&lt;p&gt;</code> 标签。对于一个有着多段文本的页面，如果没有 margin 塌陷，那么第一段文本的间距等于 top margin，中间的段落的间距等于 top margin + 上一段的 bottom margin，间距会比第一段的大。如果有了 margin 塌陷，每一段之间的 top 和 bottom margin 会陷落，那么每一段的间距都是一样的。</p>
+<p><!-- raw HTML omitted --></p>
+<p><strong>margin 陷落只会发生在普通流中的块盒的 vertical margin 中，如行内盒、浮动盒或绝对定位盒中的 margin 永远不会陷落</strong>。</p>
+<h2 id="包含块">包含块</h2>
+<p>包含块的概念比较重要，因为元素的位置和尺寸都受它的包含块所影响。对于一些属性，如<code>width</code>、<code>height</code>、<code>padding</code>和 <code>margin</code>，绝对定位元素的偏移值，当对其赋予百分比值时，都是通过元素的包含块计算来确定的。</p>
+<h3 id="如何确定包含块">如何确定包含块</h3>
+<p>确定一个元素的包含块完全依赖元素的 <code>position</code> 属性：</p>
+<ol>
+<li>如果元素的 position 属性为 <code>static</code>、<code>relative</code> 或 <code>sticky</code>，包含块可能由它的最近的祖先<strong>块元素</strong>的内容区的边缘组成，也有可能会建立格式化上下文。</li>
+<li>如果 position 属性为 <code>absolute</code>，包含块就是由它的最近的 position 不为 <code>static</code> 的祖先元素的内边距的边缘组成。</li>
+<li>如果 position 属性为 <code>fixed</code>，在连续媒体的情况下包含块就是 <code>viewport</code>，在分页媒体的情况下包含块就是<strong>分页区域</strong>。</li>
+</ol>
+<h2 id="bfcblock-formatting-context-块格式化上下文">BFC（Block Formatting Context 块格式化上下文）</h2>
+<p>BFC 是页面中的一块渲染区域，有一套渲染规则。它决定了子元素的定位，以及和其它元素的关系和相互作用。它是一个独立的盒子，内部布局不受外界影响，同时，它也不会影响到外面的元素。</p>
+<p>BFC 对浮动定位和清除浮动都很重要，浮动定位和清除浮动时只会应用于同一个 BFC 内的元素。Margin 塌陷也只会发生在属于同一 BFC 的块级元素之间。</p>
+<h3 id="如何创建-bfc">如何创建 BFC</h3>
+<p>下列方式会创建 BFC：</p>
+<ol>
+<li>根元素 <code>html</code></li>
+<li>浮动元素，即元素的 <code>float</code> 不为 <code>none</code></li>
+<li>绝对定位元素，即元素的 <code>position</code> 为 <code>absolute</code> 或 <code>fixed</code></li>
+<li>元素的 <code>display</code> 值为 <code>table-cell</code>、<code>table-caption</code>、<code>inline-block</code>、<code>flex</code>、<code>inline-flex</code> 或 <code>flow-root</code> 中的其中一个</li>
+<li><code>overflow</code> 值不为 <code>visible</code> 的块级元素</li>
+</ol>
+<h3 id="bfc-的特性">BFC 的特性</h3>
+<ol>
+<li>BFC 内部，盒子由上至下按顺序进行排列，间隙由盒子的外边距决定，当同一个 BFC 内的两个盒子具有相同相对方向的外边距时，会发生 margin 塌陷。</li>
+<li>BFC 内部，无论是浮动盒子还是普通盒子，其左总是与包含块的左边相接触</li>
+<li>BFC 区域不会与 float box 区域相叠加</li>
+<li>BFC 内外布局不会相互影响</li>
+<li>计算 BFC 高度的时候，浮动元素的高度也计算在内</li>
+</ol>
+<h3 id="触发-bfc">触发 BFC</h3>
+<p>一般有以下 4 种触发 BFC 的方法：</p>
+<ol>
+<li><code>display: table </code>(<em>前后会带有换行符，一般不常用</em>)</li>
+<li><code>overflow: scroll</code>(<em>可能会出现不想要的滚动条</em>)</li>
+<li><code>float: left</code> (<em>适用于想让元素浮动的时候</em>)</li>
+<li><code>overflow: hidden</code> (<em>副作用较小，一般比较常用</em>)</li>
+</ol>
+
+      </article>
+    </section>
+
+    
+
+    
+    <article class="ui segment utterances-comments" data-html2canvas-ignore>
+      <script
+        src="https://utteranc.es/client.js"
+        repo="superchun/blogcomment"
+        issue-term="og:title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </article>
+    
+
+    
+  </div>
+</div>
+
+
+            <footer class="ui basic center aligned segment" style="background-color: transparent;">
+              
+              <p>© 2018 - 2021 悉达多的异次元空间</p>
+              
+
+              <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+
+              
+            </footer>
+          </div>
+        </section>
+        <section class="back">
+          <div class="dream-max-width">
+            <header class="ui basic very padded segment dream-header">
+  
+  <div class="ui small circular image">
+    <img src="/me/avatar.jpeg" alt="avatar" />
+  </div>
+  
+
+  <div class="content">
+    <h1 class="ui medium header">悉达多的异次元空间<span class="sub header">你爱邻人吗？你能在夜里安然入睡吗</span>
+    </h1>
+
+    <article class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="归档"></i>
+      </a>
+      
+      <a class="item" href="/categories">
+        <i class="th list icon" title="所有分类"></i>
+      </a>
+      <a class="item" href="/tags">
+        <i class="tags icon" title="所有标签"></i>
+      </a>
+    </article>
+
+    
+    
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+
+    
+
+    
+    
+    
+          <div class="dream-tags">
+          
+          
+          
+            <a class="ui label" href="/tags/cordova/" title="Cordova">
+              Cordova
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/css/" title="CSS">
+              CSS
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/git-ssh/" title="git ssh">
+              git ssh
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/ios/" title="iOS">
+              iOS
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/js/" title="JS">
+              JS
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/oc/" title="OC">
+              OC
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/opengl-es/" title="OpenGL ES">
+              OpenGL ES
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/swift/" title="Swift">
+              Swift
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/tag1/" title="tag1">
+              tag1
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/tag2/" title="tag2">
+              tag2
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/vue/" title="Vue">
+              Vue
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/web/" title="Web">
+              Web
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/%E4%BA%8B%E4%BB%B6%E6%8B%A6%E6%88%AA/" title="事件拦截">
+              事件拦截
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构">
+              数据结构
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/%E6%9D%82%E8%B0%88%E4%BD%8E%E8%AF%AD/" title="杂谈低语">
+              杂谈低语
+            </a>
+          
+          
+          
+            <a class="ui label" href="/tags/%E7%AE%97%E6%B3%95/" title="算法">
+              算法
+            </a>
+          
+          </div>
+    
+
+    
+  </div>
+</header>
+
+
+<div class="ui relaxed grid dream-grid dream-back">
+  
+  
+  
+  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article class="ui segment markdown-body">
+      <div class="ui medium header">关于我</div>
+      <p>Hi，我是悉达多，欢迎来到我的世界</p>
+
+    </article>
+  </div>
+  
+
+  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article class="ui segment">
+      <div class="ui medium header">社交链接</div>
+      <nav class="ui secondary menu dream-menu dream-socials">
+  
+  <a class="item" href="/index.xml">
+    <i class="large rss square icon" title="RSS"></i>
+  </a>
+  
+
+  
+  <a class="item" href="mailto:xidaduo@superchun.cn">
+    <i class="large mail icon" title="Email"></i>
+  </a>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <a class="item" href="https://github.com/superchun" target="_blank">
+    <i class="large github icon" title="GitHub"></i>
+  </a>
+  
+
+  
+
+  
+</nav>
+
+    </article>
+  </div>
+
+  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+    <article class="ui segment">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+    </article>
+    
+  </div>
+
+  
+</div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    
+    <div class="ui segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="搜索" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/superchun.net\//index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: false,
+      })
+    })
+  })
+</script>
+<script src="/js/search.js"></script>
+
+    
+
+    
+
+    <script>
+  window.background = "#fff"
+  window.defaultDark =  null 
+  window.backgroundDark =  null 
+  window.backgroundImageDark =  null 
+  window.darkNav =  null 
+  window.maxTags =  null 
+  window.hasTwitterEmbed =  null 
+  window.fixedNav =  true 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@1.13.1/js/jquery.overlayScrollbars.min.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+
+    
+
+
+<script src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"></script>
+
+<script>
+  format()
+
+  function format() {
+    $('span[data-format="luxon"]').each(function () {
+      var date = $(this).text()
+
+      $(this).text(luxon.DateTime.fromISO(date, { locale: "zh" }).toFormat("yyyy年MM月dd日"))
+    })
+  }
+</script>
+
+
+
+<script src="/js/scrollToTop.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+
+
+
+<script>
+  hljs.highlightAll()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    isDark = isDark ? isDark : window.defaultDark ? 'y' : isDark
+
+    var lightTheme = "monokai-sublime"
+    var darkTheme = "monokai-sublime"
+    var theme = isDark === 'y' ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark === 'y' ? '#333' : '')
+  }
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.1"></script>
+<script src="/js/post.js" defer></script>
+
+
+    
+
+    
+  </body>
+</html>

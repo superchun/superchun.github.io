@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swift on 悉达多的异次元空间</title>
+    <link>https://superchun.net/tags/swift/</link>
+    <description>Recent content in Swift on 悉达多的异次元空间</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
+    <lastBuildDate>Sat, 15 Aug 2020 14:20:48 +0800</lastBuildDate><atom:link href="https://superchun.net/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swift相对于OC的特性</title>
+      <link>https://superchun.net/posts/swift-oc/</link>
+      <pubDate>Sat, 15 Aug 2020 14:20:48 +0800</pubDate>
+      
+      <guid>https://superchun.net/posts/swift-oc/</guid>
+      <description>Swift 在经过一段时间的发展，在 Swift5.0 ABI 稳定了，Swift 整个生态也比较丰富，使得可以在生产环境放心得使用 Swift 进行开发了。相对于 OC 繁琐的语法，以及外界不太认同的方括号调用，Swift 在语法层面及语言设计层面，显得更加 modern，开发起来也比较顺手</description>
+    </item>
+    
+    <item>
+      <title>Swift的初始化</title>
+      <link>https://superchun.net/posts/swift-initial/</link>
+      <pubDate>Tue, 28 Jul 2020 22:48:37 +0800</pubDate>
+      
+      <guid>https://superchun.net/posts/swift-initial/</guid>
+      <description>初始化是类、结构体或枚举实例化的一个过程。在新实例可用之前，这个过程会给实例的存储属性设置一个初始值以及执行一些其他必须的设置或初始化。</description>
+    </item>
+    
+    <item>
+      <title>Swift中的访问控制</title>
+      <link>https://superchun.net/posts/swift-access-control/</link>
+      <pubDate>Sat, 25 Jul 2020 22:46:36 +0800</pubDate>
+      
+      <guid>https://superchun.net/posts/swift-access-control/</guid>
+      <description>每一种语言都有自己的访问控制，以实现代码封装。访问控制可以隐藏代码的实现细节，而对外提供一个接口进行访问和使用，从而保护我们的源码。Swift 也提供了自己的访问控制</description>
+    </item>
+    
+  </channel>
+</rss>

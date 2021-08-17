@@ -10,10 +10,10 @@
     <lastBuildDate>Tue, 03 Dec 2019 10:28:26 +0000</lastBuildDate><atom:link href="https://superchun.net/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从Heapsort与Mergesort看排序算法</title>
-      <link>https://superchun.net/post/sort-algorithm-heapsort-mergesort/</link>
+      <link>https://superchun.net/posts/sort-algorithm-heapsort-mergesort/</link>
       <pubDate>Tue, 03 Dec 2019 10:28:26 +0000</pubDate>
       
-      <guid>https://superchun.net/post/sort-algorithm-heapsort-mergesort/</guid>
+      <guid>https://superchun.net/posts/sort-algorithm-heapsort-mergesort/</guid>
       <description>排序是最基本也是最广泛的一种算法，很多非常高效的算法都需要经过排序预处理。如果有了排好序的数据，那么许多问题的解决将会变得非常简单。</description>
     </item>
     

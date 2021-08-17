@@ -10,64 +10,64 @@
     <lastBuildDate>Sat, 15 Aug 2020 14:20:48 +0800</lastBuildDate><atom:link href="https://superchun.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Swift相对于OC的特性</title>
-      <link>https://superchun.net/post/swift-oc/</link>
+      <link>https://superchun.net/posts/swift-oc/</link>
       <pubDate>Sat, 15 Aug 2020 14:20:48 +0800</pubDate>
       
-      <guid>https://superchun.net/post/swift-oc/</guid>
+      <guid>https://superchun.net/posts/swift-oc/</guid>
       <description>Swift 在经过一段时间的发展，在 Swift5.0 ABI 稳定了，Swift 整个生态也比较丰富，使得可以在生产环境放心得使用 Swift 进行开发了。相对于 OC 繁琐的语法，以及外界不太认同的方括号调用，Swift 在语法层面及语言设计层面，显得更加 modern，开发起来也比较顺手</description>
     </item>
     
     <item>
       <title>OC中的mutable与immutable及它们的修饰符</title>
-      <link>https://superchun.net/post/oc-mutable-immutble/</link>
+      <link>https://superchun.net/posts/oc-mutable-immutble/</link>
       <pubDate>Mon, 03 Aug 2020 22:50:07 +0800</pubDate>
       
-      <guid>https://superchun.net/post/oc-mutable-immutble/</guid>
+      <guid>https://superchun.net/posts/oc-mutable-immutble/</guid>
       <description>OC 中的对象有一个分类：&lt;strong&gt;可变（mutable）&lt;strong&gt;与&lt;/strong&gt;不可变（inmutable）&lt;/strong&gt;。比较常见的就是不可变 NSString、NSArray 和 NSDictionary，与可变的 NSMutableString、NSMutableArray 和 NSMutableDictionary。</description>
     </item>
     
     <item>
       <title>关于Github访问慢及修改源的那些事</title>
-      <link>https://superchun.net/post/github-access-changesource/</link>
+      <link>https://superchun.net/posts/github-access-changesource/</link>
       <pubDate>Fri, 06 Dec 2019 16:13:07 +0800</pubDate>
       
-      <guid>https://superchun.net/post/github-access-changesource/</guid>
+      <guid>https://superchun.net/posts/github-access-changesource/</guid>
       <description>由于一些特殊原因，国内访问 Github 一般会比较慢，可以通过修改 DNS 来提高访问速度。</description>
     </item>
     
     <item>
       <title>从Heapsort与Mergesort看排序算法</title>
-      <link>https://superchun.net/post/sort-algorithm-heapsort-mergesort/</link>
+      <link>https://superchun.net/posts/sort-algorithm-heapsort-mergesort/</link>
       <pubDate>Tue, 03 Dec 2019 10:28:26 +0000</pubDate>
       
-      <guid>https://superchun.net/post/sort-algorithm-heapsort-mergesort/</guid>
+      <guid>https://superchun.net/posts/sort-algorithm-heapsort-mergesort/</guid>
       <description>排序是最基本也是最广泛的一种算法，很多非常高效的算法都需要经过排序预处理。如果有了排好序的数据，那么许多问题的解决将会变得非常简单。</description>
     </item>
     
     <item>
       <title>git使用SSH配置一直需要输入密码的坑</title>
-      <link>https://superchun.net/post/git-ssh-config/</link>
+      <link>https://superchun.net/posts/git-ssh-config/</link>
       <pubDate>Thu, 28 Nov 2019 10:07:07 +0000</pubDate>
       
-      <guid>https://superchun.net/post/git-ssh-config/</guid>
+      <guid>https://superchun.net/posts/git-ssh-config/</guid>
       <description>在逛 V2ex 的时候，看见有人遭遇了跟我之前一样的 git 使用 SSH 一直会要求输入密码的坑，所以便记录下来，希望能帮助到有需要的人。</description>
     </item>
     
     <item>
       <title>Mac快捷键</title>
-      <link>https://superchun.net/post/mac-shortcutkey/</link>
+      <link>https://superchun.net/posts/mac-shortcutkey/</link>
       <pubDate>Fri, 08 Nov 2019 14:26:02 +0000</pubDate>
       
-      <guid>https://superchun.net/post/mac-shortcutkey/</guid>
+      <guid>https://superchun.net/posts/mac-shortcutkey/</guid>
       <description>Mac 内置了很多对于文本操作的快捷键组合，在 Apple 的&lt;a href=&#34;https://support.apple.com/zh-cn/HT201236&#34;&gt;官方文档&lt;/a&gt;里也给出了所有 Mac 操作的快捷键。熟悉这些快捷键可以让我们日常的使用和工作更有效率，双手不需要离开键盘去摸鼠标了。</description>
     </item>
     
     <item>
       <title>iOS 事件拦截</title>
-      <link>https://superchun.net/post/ios-event/</link>
+      <link>https://superchun.net/posts/ios-event/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://superchun.net/post/ios-event/</guid>
+      <guid>https://superchun.net/posts/ios-event/</guid>
       <description>在项目中遇到一个需求，检测用户三分钟未点击屏幕，就出现广告轮播图。很自然的就联想到事件拦截了，然而之前对于 iOS 的事件机制并不是太过于了解，所以利用这次机会进行了深入学习。</description>
     </item>
     

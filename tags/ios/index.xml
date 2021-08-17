@@ -10,19 +10,19 @@
     <lastBuildDate>Sat, 15 Aug 2020 14:20:48 +0800</lastBuildDate><atom:link href="https://superchun.net/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Swift相对于OC的特性</title>
-      <link>https://superchun.net/post/swift-oc/</link>
+      <link>https://superchun.net/posts/swift-oc/</link>
       <pubDate>Sat, 15 Aug 2020 14:20:48 +0800</pubDate>
       
-      <guid>https://superchun.net/post/swift-oc/</guid>
+      <guid>https://superchun.net/posts/swift-oc/</guid>
       <description>Swift 在经过一段时间的发展，在 Swift5.0 ABI 稳定了，Swift 整个生态也比较丰富，使得可以在生产环境放心得使用 Swift 进行开发了。相对于 OC 繁琐的语法，以及外界不太认同的方括号调用，Swift 在语法层面及语言设计层面，显得更加 modern，开发起来也比较顺手</description>
     </item>
     
     <item>
       <title>OC中的mutable与immutable及它们的修饰符</title>
-      <link>https://superchun.net/post/oc-mutable-immutble/</link>
+      <link>https://superchun.net/posts/oc-mutable-immutble/</link>
       <pubDate>Mon, 03 Aug 2020 22:50:07 +0800</pubDate>
       
-      <guid>https://superchun.net/post/oc-mutable-immutble/</guid>
+      <guid>https://superchun.net/posts/oc-mutable-immutble/</guid>
       <description>OC 中的对象有一个分类：&lt;strong&gt;可变（mutable）&lt;strong&gt;与&lt;/strong&gt;不可变（inmutable）&lt;/strong&gt;。比较常见的就是不可变 NSString、NSArray 和 NSDictionary，与可变的 NSMutableString、NSMutableArray 和 NSMutableDictionary。</description>
     </item>
     

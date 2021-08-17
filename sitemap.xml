@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://superchun.net/post/</loc>
+    <loc>https://superchun.net/posts/</loc>
     <lastmod>2020-08-15T14:20:48+08:00</lastmod>
   </url><url>
     <loc>https://superchun.net/tags/ios/</loc>
@@ -11,7 +11,7 @@
     <loc>https://superchun.net/tags/swift/</loc>
     <lastmod>2020-08-15T14:20:48+08:00</lastmod>
   </url><url>
-    <loc>https://superchun.net/post/swift-oc/</loc>
+    <loc>https://superchun.net/posts/swift-oc/</loc>
     <lastmod>2020-08-15T14:20:48+08:00</lastmod>
   </url><url>
     <loc>https://superchun.net/tags/</loc>
@@ -23,13 +23,13 @@
     <loc>https://superchun.net/tags/oc/</loc>
     <lastmod>2020-08-03T22:50:07+08:00</lastmod>
   </url><url>
-    <loc>https://superchun.net/post/oc-mutable-immutble/</loc>
+    <loc>https://superchun.net/posts/oc-mutable-immutble/</loc>
     <lastmod>2020-08-03T22:50:07+08:00</lastmod>
   </url><url>
-    <loc>https://superchun.net/post/github-access-changesource/</loc>
+    <loc>https://superchun.net/posts/github-access-changesource/</loc>
     <lastmod>2019-12-06T16:13:07+08:00</lastmod>
   </url><url>
-    <loc>https://superchun.net/post/sort-algorithm-heapsort-mergesort/</loc>
+    <loc>https://superchun.net/posts/sort-algorithm-heapsort-mergesort/</loc>
     <lastmod>2019-12-03T10:28:26+00:00</lastmod>
   </url><url>
     <loc>https://superchun.net/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
@@ -41,10 +41,10 @@
     <loc>https://superchun.net/tags/git-ssh/</loc>
     <lastmod>2019-11-28T10:07:07+00:00</lastmod>
   </url><url>
-    <loc>https://superchun.net/post/git-ssh-config/</loc>
+    <loc>https://superchun.net/posts/git-ssh-config/</loc>
     <lastmod>2019-11-28T10:07:07+00:00</lastmod>
   </url><url>
-    <loc>https://superchun.net/post/mac-shortcutkey/</loc>
+    <loc>https://superchun.net/posts/mac-shortcutkey/</loc>
     <lastmod>2019-11-08T14:26:02+00:00</lastmod>
   </url><url>
     <loc>https://superchun.net/tags/%E6%9D%82%E8%B0%88%E4%BD%8E%E8%AF%AD/</loc>
@@ -52,7 +52,7 @@
   </url><url>
     <loc>https://superchun.net/categories/</loc>
   </url><url>
-    <loc>https://superchun.net/post/ios-event/</loc>
+    <loc>https://superchun.net/posts/ios-event/</loc>
   </url><url>
     <loc>https://superchun.net/tags/%E4%BA%8B%E4%BB%B6%E6%8B%A6%E6%88%AA/</loc>
   </url>

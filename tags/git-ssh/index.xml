@@ -10,10 +10,10 @@
     <lastBuildDate>Thu, 28 Nov 2019 10:07:07 +0000</lastBuildDate><atom:link href="https://superchun.net/tags/git-ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git使用SSH配置一直需要输入密码的坑</title>
-      <link>https://superchun.net/post/git-ssh-config/</link>
+      <link>https://superchun.net/posts/git-ssh-config/</link>
       <pubDate>Thu, 28 Nov 2019 10:07:07 +0000</pubDate>
       
-      <guid>https://superchun.net/post/git-ssh-config/</guid>
+      <guid>https://superchun.net/posts/git-ssh-config/</guid>
       <description>在逛 V2ex 的时候，看见有人遭遇了跟我之前一样的 git 使用 SSH 一直会要求输入密码的坑，所以便记录下来，希望能帮助到有需要的人。</description>
     </item>
     

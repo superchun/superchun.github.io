@@ -10,10 +10,10 @@
     <lastBuildDate>Sat, 15 Aug 2020 14:20:48 +0800</lastBuildDate><atom:link href="https://superchun.net/tags/swift/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Swift相对于OC的特性</title>
-      <link>https://superchun.net/post/swift-oc/</link>
+      <link>https://superchun.net/posts/swift-oc/</link>
       <pubDate>Sat, 15 Aug 2020 14:20:48 +0800</pubDate>
       
-      <guid>https://superchun.net/post/swift-oc/</guid>
+      <guid>https://superchun.net/posts/swift-oc/</guid>
       <description>Swift 在经过一段时间的发展，在 Swift5.0 ABI 稳定了，Swift 整个生态也比较丰富，使得可以在生产环境放心得使用 Swift 进行开发了。相对于 OC 繁琐的语法，以及外界不太认同的方括号调用，Swift 在语法层面及语言设计层面，显得更加 modern，开发起来也比较顺手</description>
     </item>
     

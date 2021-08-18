@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>404 Not Found | 悉达多的异次元空间</title>
+    <title>Test | 悉达多的异次元空间</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -12,27 +12,30 @@
 
 
 
-<meta name="author" content="悉达多" />
-<meta name="description" content="" />
+<meta name="author" content="Author Name" />
+<meta name="description" content="Cut out summary from your post content here.
+" />
 
 
 
 <meta name="generator" content="Hugo 0.87.0" />
 
-<link rel="canonical" href="https://superchun.net/404.html" />
+<link rel="canonical" href="https://superchun.net/posts/test/" />
 
 
-<meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://superchun.net/404.html" />
+<meta property="og:title" content="Test" />
+<meta property="og:description" content="Cut out summary from your post content here." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://superchun.net/posts/test/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-18T17:38:25+08:00" />
+<meta property="article:modified_time" content="2021-08-18T17:38:25+08:00" />
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Test"/>
+<meta name="twitter:description" content="Cut out summary from your post content here."/>
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
@@ -70,7 +73,17 @@
 </style>
 
 
-     
+    
+
+
+
+<link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/monokai-sublime.min.css" />
+
+
+
+
+
+
 
     
     <link rel="stylesheet" href="/css/custom.css" />
@@ -100,16 +113,80 @@
         <section class="front">
           <div class="dream-max-width">
             
-<div class="dream-404-container">
-  <div class="ui basic center aligned segment">
+<div class="ui relaxed centered grid dream-grid dream-grid-single">
+  
+  
+  
+  
+
+  
+  <div class="sixteen wide mobile sixteen wide tablet ten wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    <section class="ui top attached segment">
+      <header>
+        <h1 class="ui large header">Test<span class="sub header">
+            <span class="left">
+              @
+              
+                
+                  Author Name
+                
+              
+
+              | 
+                  <span data-format="luxon">2021-08-18T17:38:25&#43;08:00</span>
+                
+
+              | 1 分钟阅读
+
+              
+              | 更新于
+                
+                  <span data-format="luxon">2021-08-18T17:38:25&#43;08:00</span>
+                
+              
+            </span>
+
+            
+            <span class="dream-share">
+  <a href="#" class="save-as-image" title="保存为图片" onclick="savePostAsImg()">
+    <i class="save icon"></i>
+  </a>
+  <a href="https://twitter.com/intent/tweet?text=Test&url=https%3a%2f%2fsuperchun.net%2fposts%2ftest%2f" title="Twitter">
+    <i class="twitter icon"></i>
+  </a>
+  <a href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fsuperchun.net%2fposts%2ftest%2f" title="Facebook">
+    <i class="facebook icon"></i>
+  </a>
+</span>
+
+            
+          </span>
+        </h1>
+      </header>
+
+      <article class="main">
+        
+
+        <p>Cut out summary from your post content here.</p>
+<p>The remaining content of your post.</p>
+      </article>
+    </section>
+
     
-      <h1 class="ui header">
-        Oops...You are lost in dream.
-        <span class="sub header">Don't worry though, click the button below to wake up.</span>
-      </h1>
-      <p>
-        <button class="ui secondary button" onclick="window.location.href = 'https:\/\/superchun.net\/'">返回首页</button>
-      </p>
+
+    
+    <article class="ui segment utterances-comments" data-html2canvas-ignore>
+      <script
+        src="https://utteranc.es/client.js"
+        repo="superchun/blogcomment"
+        issue-term="og:title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </article>
+    
+
     
   </div>
 </div>
@@ -389,7 +466,58 @@
 <script src="/js/main.js"></script>
 <script src="/js/theme.js"></script>
 
-     
+    
+
+
+<script src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"></script>
+
+<script>
+  format()
+
+  function format() {
+    $('span[data-format="luxon"]').each(function () {
+      var date = $(this).text()
+
+      $(this).text(luxon.DateTime.fromISO(date, { locale: "zh" }).toFormat("yyyy年MM月dd日"))
+    })
+  }
+</script>
+
+
+
+<script src="/js/scrollToTop.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+
+
+
+<script>
+  hljs.highlightAll()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    isDark = isDark ? isDark : window.defaultDark ? 'y' : isDark
+
+    var lightTheme = "monokai-sublime"
+    var darkTheme = "monokai-sublime"
+    var theme = isDark === 'y' ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark === 'y' ? '#333' : '')
+  }
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.1"></script>
+<script src="/js/post.js" defer></script>
+
 
     
 
